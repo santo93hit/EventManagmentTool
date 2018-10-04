@@ -1,5 +1,7 @@
 package com.varian.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,11 +11,16 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "role")
-public class Role {
+public class Role implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5271089928721246370L;
+
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="role_id")
+	@Column(name="role_id" , unique = true, updatable=false)
 	private int id;
 	
 	@Column(name="role")

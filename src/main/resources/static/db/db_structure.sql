@@ -78,3 +78,15 @@ CREATE TABLE `user_role` (
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2016-11-16 13:21:44
+
+
+ALTER TABLE `user` 
+ADD COLUMN `created_date` DATE NULL AFTER `password`,
+ADD COLUMN `modified_date` DATE NULL AFTER `created_date`,
+ADD COLUMN `country` VARCHAR(100) NULL AFTER `modified_date`,
+ADD COLUMN `state` VARCHAR(100) NULL AFTER `country`,
+ADD COLUMN `city` VARCHAR(100) NULL AFTER `state`,
+ADD COLUMN `zip_code` INT(11) NULL AFTER `city`,
+ADD COLUMN `address_line1` VARCHAR(500) NULL AFTER `zip_code`,
+ADD COLUMN `address_line2` VARCHAR(500) NULL AFTER `address_line1`,
+ADD COLUMN `mobile_number` INT(15) NULL AFTER `address_line2`;

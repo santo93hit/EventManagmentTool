@@ -23,8 +23,12 @@
 			<div align="center" th:if="${param.error}">
 				<p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
 			</div>
+			<div class="pull-left">
+				<a href="#" th:href="@{|/registration/forgotPassword|}">Forgot Password... ?</a>
+				<!-- <a href="#" ><button name="Submit" value="Login" type="Submit">Login</button></a> -->
+			</div>
 			<div class="pull-right">
-				<a href="#" th:href="@{|/registration|}">Sign Up</a>
+				<a href="#" th:href="@{|/registration/new|}">Sign Up</a>
 				<a href="#" ><button name="Submit" value="Login" type="Submit">Login</button></a>
 			</div>
 			<!-- <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button> -->
